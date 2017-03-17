@@ -1,0 +1,82 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<title>您要找的页面不存在或者已经转移</title>
+<style type="text/css">
+body{ text-align:center; font-size:14px; line-height:200%;}
+*{ margin:0; padding:0;}
+img{ border:0;}
+#bigBox{ background-color:#f3f8fe; width:620px; border:8px solid #fafbfd; padding-bottom:22px; margin:50px auto auto auto; }
+#box1{ text-align:left; margin:10px 0 10px 30px;}
+#box2{ background-color:#d2e2f0; padding:10px 30px 10px 30px; text-align:left;}
+#box2 #tips{ background-color:#eaf2f8; font-size:12px; line-height:22px; padding:5px;}
+h2{ text-align:left; font-size:14px; line-height:36px;}
+#box2 h2{ margin-top:18px;}
+#box3 h2{ margin-top:6px;padding-left:30px;}
+#box3{}
+#box2 input{ height:24px; width:357px; padding-top:5px;font-size:14px; border:1px solid #838e98;}
+</style>
+
+</head>
+
+<body>
+<div id="bigBox">
+  <div id="box1">
+    <a href="http://www.kongfz.com/" target="_blank"><img src="http://www.kongfz.cn/image/logo.gif" alt="孔夫子旧书网" /></a>
+  </div>
+  <div id="box2">
+    <img src="http://www.kongfz.cn/image/refund/err_msg.gif" alt="错误信息" /><br />
+	<div id="tips">
+	　　孔夫子旧书网是一个为书友们搭建的旧书交易平台， 这里汇集全国各地的几千家书店，展示多达2000万种古旧书。您可以在这里买书、卖书、交流旧书知识。
+	</div>
+	<h2>您可以在本站搜索您要找的图书：</h2>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="color:#c8c8c7;"id="bookName" name="bookName" type="text" onkeydown="if(event.keyCode==13)seachBook();"   onfocus="onkeyCheck(this.value);" onblur="onFocusBlur(this.value);" value="在这里输入您要搜索的书名或者作者、出版社"/> <img src="http://www.kongfz.cn/image/refund/bt_search.gif" alt="搜索" align="absmiddle" onclick="seachBook();" style="cursor: pointer;"/>
+  </div>
+  <div id="box3">
+    <h2>您也可以浏览以下栏目查找您想要的图书：</h2>
+    <a href="http://shop.kongfz.com/"><img src="http://www.kongfz.cn/image/refund/shop.gif" alt="书店联盟" /></a>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kongfz.cn/"><img src="http://www.kongfz.cn/image/refund/auction.gif" alt="在线拍卖" /></a>
+  </div>
+</div>
+<script type="text/javascript">
+<!--
+  function seachBook()
+  {
+
+    var bookName = document.getElementById("bookName").value;
+    if(bookName != "")
+    {
+        location.href="http://search.kongfz.com/book.jsp?act=newSys&query="+encodeURI(bookName)+"&sale=0";
+    }
+    else
+    {
+      alert("请输入搜索内容！");
+      return;
+    }
+  }
+  function onkeyCheck(val)
+  {
+    if(val == "在这里输入您要搜索的书名或者作者、出版社")
+    {
+      document.getElementById("bookName").value = "";
+      document.getElementById("bookName").style.color="";
+    }
+  }
+  function onFocusBlur(val)
+  {
+    if(val == "")
+    {
+      document.getElementById("bookName").value = "在这里输入您要搜索的书名或者作者、出版社";
+      document.getElementById("bookName").style.color="#c8c8c7";
+    }
+  }
+  //document.getElementById("bookName").focus();
+//-->
+</script>
+
+</body>
+</html>
